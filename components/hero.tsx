@@ -8,15 +8,25 @@ export function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden">
       <Parallax offset={300} className="absolute inset-0">
-        <video
+        <motion.video
           className="absolute inset-0 w-full h-full object-cover"
           src="/intro.mp4"
           autoPlay
           loop
           muted
           playsInline
+          preload="auto"
+          poster="/placeholder.jpg"
+          initial={{ scale: 1.1, opacity: 0.7 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <motion.div
+          className="absolute inset-0 bg-black/40"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5, delay: 0.5 }}
+        />
       </Parallax>
 
       <div className="relative flex min-h-screen items-center justify-center px-4 pt-20 text-center">

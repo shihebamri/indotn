@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function Gallery() {
   return (
     <section className="bg-black py-12">
@@ -10,19 +12,19 @@ export function Gallery() {
           </h2>        
         <div className="grid gap-4 md:grid-cols-4">
           <div className="w-full h-48">
-            <img src="/g1.png" alt="Gallery Image 1" className="w-full h-full object-cover" />
+            <Image src="/g1.png" alt="Gallery Image 1" className="w-full h-full object-cover" width={400} height={192} />
           </div>
           <div className="w-full h-48">
-            <img src="/g2.png" alt="Gallery Image 2" className="w-full h-full object-cover" />
+            <Image src="/g2.png" alt="Gallery Image 2" className="w-full h-full object-cover" width={400} height={192} />
           </div>
           <div className="w-full h-48">
-            <img src="/g3.png" alt="Gallery Image 3" className="w-full h-full object-cover" />
+            <Image src="/g3.png" alt="Gallery Image 3" className="w-full h-full object-cover" width={400} height={192} />
           </div>
           <div className="w-full h-48">
-            <img src="/g4.png" alt="Gallery Image 4" className="w-full h-full object-cover" />
+            <Image src="/g4.png" alt="Gallery Image 4" className="w-full h-full object-cover" width={400} height={192} />
           </div>
           <div className="w-full h-48">
-            <img src="/g5.png" alt="Gallery Image 5" className="w-full h-full object-cover" />
+            <Image src="/g5.png" alt="Gallery Image 5" className="w-full h-full object-cover" width={400} height={192} />
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@
 
 import { FadeIn, FadeInStagger } from "./animations/fade-in";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const products = [
 	{
@@ -147,13 +148,18 @@ export function Products() {
 									<FadeIn key={product.name}>
 										<div className="flex items-start gap-6">
 											{/* Image */}
-											<motion.img
+											<motion.div
 												whileHover={{ scale: 1.05 }}
 												transition={{ duration: 0.6 }}
-												src={product.image}
-												alt={product.name}
-												className="w-32 h-32 rounded-lg object-cover"
-											/>
+											>
+												<Image
+													src={product.image}
+													alt={product.name}
+													className="w-32 h-32 rounded-lg object-cover"
+													width={128}
+													height={128}
+												/>
+											</motion.div>
 											{/* Text Content */}
 											<div className="flex-1">
 												<div className="flex justify-between items-center">

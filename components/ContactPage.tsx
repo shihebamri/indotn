@@ -4,16 +4,20 @@ import { FadeIn, FadeInStagger } from "./animations/fade-in"
 import { HoverCard } from "./ui/hover-card"
 import { motion } from "framer-motion"
 import { Facebook, Instagram, Phone, MapPin, Mail } from "lucide-react"
+import Image from "next/image"
 
 export function ContactPage() {
   return (
     <section className="bg-[#111] py-24 relative">
       {/* Separator Image */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md">
-        <img
+        <Image
           src="https://i.postimg.cc/8PfDFZSG/sushi.png"
           alt="Separator"
           className="w-full h-auto"
+          width={400}
+          height={200}
+          unoptimized
         />
       </div>
 
@@ -54,7 +58,7 @@ export function ContactPage() {
                     </div>
                     <div className="flex items-center space-x-4">
                       <Mail className="text-golden" size={24} />
-                      <p className="text-neutral-400">contact@INDONESIANRESTAURANT.com</p>
+                      <p className="text-neutral-400">contact@INDONESIAN.com</p>
                     </div>
                     <div className="pt-6">
                       <h3 className="font-playfair text-xl font-light mb-4">Follow Us</h3>

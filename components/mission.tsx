@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { FadeIn, FadeInStagger } from "./animations/fade-in"
 
 export function Mission() {
@@ -10,20 +11,29 @@ export function Mission() {
           <div className="grid gap-8 md:grid-cols-2">
             <FadeIn>
               <div className="grid grid-cols-2 gap-4">
-                <img
+                <Image
                   src="https://i.postimg.cc/8PXB93VW/1.jpg"
                   alt="Chef's portrait"
                   className="col-span-1 row-span-1"
+                  width={300}
+                  height={300}
+                  unoptimized
                 />
-                <img
+                <Image
                   src="https://i.postimg.cc/cLjhgz9Z/1-1.jpg"
                   alt="Hot chocolate"
                   className="col-span-1 row-span-1"
+                  width={300}
+                  height={300}
+                  unoptimized
                 />
-                <img
+                <Image
                   src="https://i.postimg.cc/fR3jNKwP/1-2.jpg"
                   alt="Box of chocolates"
                   className="col-span-2 row-span-1"
+                  width={600}
+                  height={300}
+                  unoptimized
                 />
               </div>
             </FadeIn>
@@ -43,7 +53,7 @@ export function Mission() {
                   serve.
                 </p>
                 <div className="mt-8">
-                  <img src="logo.png" alt="Signature" className="h-12" />
+                  <Image src="/logo.png" alt="Signature" className="h-12" width={48} height={48} />
                   <p className="mt-2 text-sm">The creators of INDONESIAN RESTAURANT</p>
                 </div>
               </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { FadeIn } from "./animations/fade-in";
+import Image from "next/image";
 
 export function Features() {
   return (
@@ -29,10 +30,13 @@ export function Features() {
         <FadeIn delay={0.2}>
           <div className="flex items-center justify-center">
             <div className="relative">
-              <img
+              <Image
                 src="https://i.postimg.cc/6qpnKzM2/SHRIMPS.png"
                 alt="Plat raffiné"
                 className="max-w-[300px] rounded-lg"
+                width={300}
+                height={200}
+                unoptimized
               />
             </div>
           </div>

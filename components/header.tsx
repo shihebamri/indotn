@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { ShoppingCart, Home, Book, Store, Phone, Newspaper, Menu } from "lucide-react"
+import { ShoppingCart, Home, Book, Store, Phone, Newspaper, Menu, CalendarCheck2 } from "lucide-react"
 import { useState } from "react"
 
 export function Header() {
@@ -13,7 +13,7 @@ export function Header() {
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <Link href="/" className="text-2xl font-light flex items-center gap-2">
           <Image
-            src="logo.png"
+            src="/logo.png"
             alt="Logo"
             width={60}
             height={60}
@@ -47,6 +47,21 @@ export function Header() {
                 <Phone className="h-4 w-4" />
                 Contact
               </Link>
+            </li>
+            <li>
+              <button
+                className="flex items-center gap-2 text-sm uppercase tracking-wider hover:text-golden focus:outline-none bg-transparent border-0"
+                onClick={() => {
+                  const reservationSection = document.getElementById('reservation');
+                  if (reservationSection) {
+                    reservationSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                aria-label="Go to Reservation"
+              >
+                <CalendarCheck2 className="h-4 w-4" />
+                Réservations
+              </button>
             </li>
           </ul>
         </nav>
